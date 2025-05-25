@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spork Hell</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="clamped">
+    <p><a href="/">← Back</a></p>
+    <div id="page-intro">
+      <h1>Spork Hell</h1>
+
+      <p>Fun, simple quizzes for totally normal people.</p>
+
+      <button id="btn-start" big>Start ➡</button>
+
+      <p>
+        <a href="https://gregtyler.co.uk/blog/generative-quizzing"
+          >Find out more about this project</a
+        >
+      </p>
+    </div>
+    <div id="page-quiz" hidden>
+      <h1 id="txt-title"></h1>
+      <p id="txt-intro"></p>
+
+      <p>
+        <span id="txt-score"></span>
+        /
+        <span id="txt-out-of"></span>
+      </p>
+
+      <p>
+        <input id="quiz-prompt" type="text" />
+        <button secondary>Submit</button>
+      </p>
+
+      <p>
+        <button id="btn-retire">Give up</button>
+        <button id="btn-another">Try a different quiz</button>
+      </p>
+
+      <h2>Answers</h2>
+      <ul id="quiz-list"></ul>
+    </div>
+  </body>
+</html>

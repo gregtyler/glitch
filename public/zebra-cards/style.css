@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --color-bg: darkblue;
+  --color-text-main: #000000;
+  --color-primary: darkblue;
+  --font-family: "Space Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+body {
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.card {
+  cursor: move;
+  user-select: none;
+  
+  position: absolute;
+  width: 2.4in;
+  height: 3.5in;
+  background-color: white;
+  border-radius: 0.2in;
+  padding: 0.2in;
+  font-size: 10px;
+  
+  box-shadow: 0 0 10px hsla(0,0%,0%,0.4);
+  border: 1px solid hsla(0,0%,0%,0.4);
+  
+  h1, h2, p, dl {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 1.4em;
+    padding-bottom: .5em;
+    border-bottom: 1px dashed currentColor;
+    
+    &> a {color:inherit;}
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  p {
+    text-align: center;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    
+  }
+
+  dt {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  dd {
+    margin-left: 0;
+    text-align: right;
+  }
+}
+
+.align-left p {
+  text-align: left;
+}

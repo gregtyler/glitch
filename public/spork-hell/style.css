@@ -1,0 +1,22 @@
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  color: darkred;
+  margin: 0.5em 0;
+}
+
+li::before {
+  content: "❌";
+  margin-right: 0.5em;
+}
+
+li[correct] {
+  color: darkgreen;
+}
+
+li[correct]::before {
+  content: "✔️";
+}

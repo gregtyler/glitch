@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Knewave&display=swap");
+
+:root {
+  --color-bg: #fff8f0;
+  --color-text: #2b303a;
+  --color-primary: #ab2346;
+  --color-primary-alt: #ca61c3;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 300;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px dashed currentColor;
+  line-height: 1em;
+  text-align: center;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration-thickness: 4px;
+}
+
+a:visited {
+  color: var(--color-primary-alt);
+}
+
+button {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.5em 1em;
+  font-family: inherit;
+  font-size: 1em;
+  color: var(--color-bg);
+  box-shadow: 0 5px var(--color-primary-alt);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[big] {
+  font-size: 1.6em;
+}
+
+button[secondary] {
+  background-color: #eee;
+  box-shadow: 0 5px #ccc;
+  color: var(--color-text);
+}
+
+button:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.25rem;
+  color: var(--color-text);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--color-text);
+  padding: 5px;
+}
+
+th {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.clamped {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}

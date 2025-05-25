@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Generated quiz</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="./schema.js" defer></script>
+    <script src="./data.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="clamped">
+    <p><a href="/">← Back</a></p>
+    <h1 data-js="prompt"></h1>
+
+    <p>
+      <strong>WARNING:</strong> This data set has very limited data, so almost
+      every question is about either Egypt or France and makes inaccurate claims
+      about them (like them being the most populous countries in the world).
+    </p>
+
+    <p><input type="text" data-js="input" /></p>
+
+    <table>
+      <tbody data-js="questions"></tbody>
+    </table>
+
+    <pre id="log"></pre>
+  </body>
+</html>
