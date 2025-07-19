@@ -12,7 +12,7 @@ function makeDraggable(state, el) {
     state.dragging = { dx: state.pos.x - x, dy: state.pos.y - y };
     el.classList.add("dragging");
     el.setPointerCapture(event.pointerId);
-    el.style.zIndex = (zIndex++);
+    el.style.zIndex = zIndex++;
   }
 
   function end(_event) {
@@ -55,10 +55,10 @@ function init() {
         el.style.transform = `translate(${this._pos.x}px,${this._pos.y}px)`;
       },
     };
-    state.pos = { x: 0, y: 0 };
+    state.pos = { x: (i + 1) * 10, y: i * 45 };
     makeDraggable(state, el);
-    
-    el.style.transform = `translate(${(i+1)*10}px,${(i)*45}px)`;
+
+    el.style.transform = `translate(${state.pos.x}px,${state.pos.y}px)`;
   });
 }
 
