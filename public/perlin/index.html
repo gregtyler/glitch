@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Perlin generator tests</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./script.js" defer></script>
+
+    <style>
+      .form-group + .form-group {
+        margin-top: 1rem;
+      }
+
+      .form-group > label,
+      .form-group > input,
+      .form-group > select {
+        display: block;
+      }
+
+      .form-group > select {
+        padding: 0.25rem;
+        border: 1px solid darkgrey;
+        background-color: white;
+        font-family: inherit;
+        font-size: inherit;
+        color: var(--color-text);
+      }
+    </style>
+  </head>
+  <body class="clamped">
+    <canvas width="500" height="500" style="background-color: red"></canvas>
+
+    <div class="form-group">
+      <label for="seed">Seed</label>
+      <input name="seed" id="seed" value="storm" />
+    </div>
+
+    <div class="form-group">
+      <label for="brownian-octaves">Brownian octaves</label>
+      <input type="number" name="brownian-octaves" value="6" min="1" max="20" />
+    </div>
+
+    <div class="form-group">
+      <label for="pixels">Number of pixels</label>
+      <input
+        type="number"
+        name="pixels"
+        id="pixels"
+        value="500"
+        min="1"
+        max="500"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="colouring">Map colouring</label>
+      <select name="colouring" id="colouring">
+        <option value="bw">Black and white</option>
+        <option value="map">Map-like</option>
+      </select>
+    </div>
+  </body>
+</html>
