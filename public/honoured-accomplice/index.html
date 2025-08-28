@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Honoured Accomplice</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="clamped">
+    <p><a href="../">← Back</a></p>
+    <h1>Betrayal Companion</h1>
+
+    <div id="app"></div>
+
+    <p>
+      <button id="reset" class="c-btn--reset">Reset data</button>
+    </p>
+
+    <template id="selector-template">
+      <label>
+        <input type="checkbox" name="chars" value="" />
+        <div class="c-character c-character--small">
+          <img class="c-character__image" src="" role="presentation" />
+          <h2 class="c-character__title"></h2>
+        </div>
+      </label>
+    </template>
+
+    <template id="character-template">
+      <div class="c-character">
+        <img class="c-character__image" src="" role="presentation" />
+        <div>
+          <h2 class="c-character__title"></h2>
+
+          <dl class="c-character__stats">
+            <dt>SPD</dt>
+            <dd data-stat-id="spd">
+              <button class="c-character__btn c-character__btn--negative">
+                ←
+              </button>
+              <span></span>
+              <button class="c-character__btn c-character__btn--positive">
+                →
+              </button>
+            </dd>
+            <dt>MGT</dt>
+            <dd data-stat-id="mgt">
+              <button class="c-character__btn c-character__btn--negative">
+                ←
+              </button>
+              <span></span>
+              <button class="c-character__btn c-character__btn--positive">
+                →
+              </button>
+            </dd>
+            <dt>SAN</dt>
+            <dd data-stat-id="san">
+              <button class="c-character__btn c-character__btn--negative">
+                ←
+              </button>
+              <span></span>
+              <button class="c-character__btn c-character__btn--positive">
+                →
+              </button>
+            </dd>
+            <dt>KNW</dt>
+            <dd data-stat-id="knw">
+              <button class="c-character__btn c-character__btn--negative">
+                ←
+              </button>
+              <span></span>
+              <button class="c-character__btn c-character__btn--positive">
+                →
+              </button>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
