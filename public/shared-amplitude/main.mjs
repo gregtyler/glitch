@@ -74,6 +74,7 @@ function handover() {
   $game.btnHide.hidden = true;
   $game.btnGuess.hidden = false;
   $game.goal.hidden = true;
+  $game.thumb.style.left = "50%";
   $game.thumb.hidden = false;
 }
 
@@ -164,3 +165,13 @@ $game.btnRestart.addEventListener("click", () => {
 });
 
 restart();
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js").then((reg) => {
+    reg.addEventListener("updatefound", function () {
+      console.log(
+        "A new version of this application is available. Refresh to update."
+      );
+    });
+  });
+}
