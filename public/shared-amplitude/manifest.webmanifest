@@ -1,0 +1,25 @@
+{
+  "short_name": "Amplitude",
+  "name": "Amplitude",
+  "theme_color": "#d2c9a5",
+  "background_color": "#d2c9a5",
+  "start_url": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./images/favicon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
