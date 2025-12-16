@@ -74,6 +74,7 @@ function handover() {
   $game.btnHide.hidden = true;
   $game.btnGuess.hidden = false;
   $game.goal.hidden = true;
+  $game.thumb.style.left = "50%";
   $game.thumb.hidden = false;
 }
 
