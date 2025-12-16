@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amplitude</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="c-scene c-scene--game" hidden>
+        <div class="c-slider js-slider">
+          <div class="c-slider__goal js-goal" style="left: 25%"></div>
+          <div class="c-slider__thumb js-thumb" style="left: 66%"></div>
+        </div>
+        <div class="c-ui">
+          <span class="js-lower">&laquo; Healthy</span>
+          <div class="c-ui__controls">
+            <button class="c-button js-btn--hide">🫣 Hide Answer & Pass</button>
+            <button class="c-button js-btn--guess">🔓 Make Guess</button>
+          </div>
+          <span class="js-upper">Unhealthy &raquo;</span>
+        </div>
+        <div class="c-score__container js-score-container">
+          <div class="c-score js-score"></div>
+          <button class="c-button js-btn--restart">🔄 Restart</button>
+        </div>
+      </div>
+
+      <div class="c-scene c-scene--menu">
+        <div class="c-menu">
+          <h1 class="c-menu__title">Amplitude</h1>
+
+          <button class="c-button js-start--random">Random</button>
+          <hr class="c-menu__spacer" />
+
+          <div class="c-menu__custom">
+            <label for="lower">&laquo;</label>
+            <input
+              id="lower"
+              type="text"
+              class="c-input js-lower-input"
+              value=""
+              aria-label="Lower value"
+            />
+            <input
+              id="upper"
+              type="text"
+              class="c-input c-input--right js-upper-input"
+              value=""
+              aria-label="Upper value"
+            />
+            <label for="upper">&raquo;</label>
+          </div>
+          <button class="c-button js-start--custom">Custom</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.mjs" type="module"></script>
+  </body>
+</html>
