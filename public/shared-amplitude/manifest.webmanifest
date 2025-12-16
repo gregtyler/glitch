@@ -5,6 +5,7 @@
   "background_color": "#d2c9a5",
   "start_url": "./",
   "display": "standalone",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "./images/favicon-144.png",
