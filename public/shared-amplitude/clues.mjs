@@ -139,7 +139,7 @@ const clues = [
   ["Best era to time travel", "Worst era to time travel"],
   ["The best", "The worst"],
   ["Large number", "Small number"],
-  ["`False", "`True"],
+  ["False", "True"],
   ["Avant garde", "Old fashioned"],
   ["Beautiful word", "Ugly word"],
   ["Tiny", "Small"],
