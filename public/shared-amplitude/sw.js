@@ -4,15 +4,15 @@ self.addEventListener("install", function (e) {
   e.waitUntil(
     caches.open("scoreboard").then(function (cache) {
       return cache.addAll([
-        "/",
-        "/index.html",
-        "/main.mjs",
-        "/clues.mjs",
-        "/main.css",
-        "/images/favicon.png",
-        "/images/favicon-144.png",
-        "/images/favicon-192.png",
-        "/images/favicon-512.png",
+        "./",
+        "./index.html",
+        "./main.mjs",
+        "./clues.mjs",
+        "./main.css",
+        "./images/favicon.png",
+        "./images/favicon-144.png",
+        "./images/favicon-192.png",
+        "./images/favicon-512.png",
       ]);
     })
   );
