@@ -4,13 +4,13 @@ const CACHE_BUST = "v20251222-1";
 
 self.addEventListener("install", function (e) {
   e.waitUntil(
-    caches.open("shared-amplitude").then(function (cache) {
+    caches.open("chance").then(function (cache) {
       return cache.addAll([
         "./",
         "./index.html",
-        "./main.mjs",
-        "./clues.mjs",
-        "./main.css",
+        "./script.mjs",
+        "./sets.mjs",
+        "./style.css",
         "./images/favicon.png",
         "./images/favicon-144.png",
         "./images/favicon-192.png",
