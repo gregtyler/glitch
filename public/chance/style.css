@@ -1,0 +1,133 @@
+:root {
+  --spacing: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+ * MARK: FRAME
+ */
+body {
+  margin: 0;
+  font-family: monospace;
+  font-size: 1rem;
+  user-select: none;
+  padding-bottom: calc(var(--spacing) * 4);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/**
+ * MARK: MENU
+ */
+.c-menu {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: min-content;
+  gap: var(--spacing);
+  margin: var(--spacing);
+  justify-content: space-around;
+}
+
+.c-menu > button {
+  aspect-ratio: 1 / 1;
+  font-family: inherit;
+  font-size: 1.5rem;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 3px;
+}
+
+.c-menu__break {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: calc(var(--spacing) * 2);
+}
+
+/**
+ * MARK: SAVED
+ */
+.c-saved {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: var(--spacing);
+  background-color: black;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  & > li {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: calc(var(--spacing) / 2);
+
+    & + li {
+      margin-left: var(--spacing);
+    }
+  }
+}
+
+/**
+ * MARK: CARD
+ */
+.c-card {
+  width: 90vw;
+  height: 90vh;
+  border-radius: 8px;
+  padding: 0;
+  text-align: center;
+}
+
+.c-card::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.c-card[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-card__content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.c-card__content--big {
+  font-size: 6rem;
+}
+
+.c-card__actions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  border-top: 3px solid black;
+  & > button {
+    flex: 1;
+    padding: var(--spacing);
+    border: 0;
+    background-color: white;
+    font-family: inherit;
+    font-weight: bold;
+
+    & + button {
+      border-left: 3px solid black;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chance</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="shortcut icon" href="./images/favicon.png" />
+    <link rel="apple-touch-icon" href="./images/favicon-192.png" />
+    <meta name="theme-color" content="#FFFFFF" />
+  </head>
+  <body>
+    <div class="c-menu">
+      <button data-set="dice-d6">Dice (1d6)</button>
+      <button data-set="letter">Letter</button>
+      <button data-set="celebrity">Celebrity</button>
+      <button data-set="category">Category</button>
+
+      <h2 class="c-menu__break">Dice</h2>
+
+      <button data-set="dice-d4">1d4</button>
+      <button data-set="dice-d8">1d8</button>
+      <button data-set="dice-d10">1d10</button>
+      <button data-set="dice-d12">1d12</button>
+      <button data-set="dice-d20">1d20</button>
+    </div>
+
+    <ol class="c-saved" hidden></ol>
+
+    <dialog class="c-card">
+      <div class="c-card__content"></div>
+      <div class="c-card__actions">
+        <button data-action="close">Close</button>
+        <button data-action="save">Save</button>
+      </div>
+    </dialog>
+
+    <script src="./script.mjs" defer type="module"></script>
+  </body>
+</html>
