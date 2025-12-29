@@ -19,6 +19,23 @@ const save = (value) => {
   $savedArea.hidden = false;
 };
 
+/**
+ * @param {string} value
+ */
+const format = (value) => {
+  const $span = document.createElement("span");
+  $span.textContent = value;
+
+  $span.innerHTML = $span.innerHTML
+    .replace(
+      /\*\*(.*?)\*\*/g,
+      '<strong class="c-card__content--big">$1</strong>'
+    )
+    .replace(/\n/g, "<br>");
+
+  return $span;
+};
+
 document.addEventListener("click", (e) => {
   if (e.target instanceof HTMLButtonElement && e.target.dataset.set) {
     const setName = e.target.dataset.set;
@@ -27,8 +44,8 @@ document.addEventListener("click", (e) => {
 
     const value = set[Math.floor(Math.random() * set.length)];
 
-    $cardContent.classList.toggle("c-card__content--big", value.length <= 2);
-    $cardContent.textContent = value;
+    $cardContent.textContent = "";
+    $cardContent.appendChild(format(value));
     $card.showModal();
   }
 
