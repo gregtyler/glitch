@@ -29,24 +29,31 @@ const format = (value) => {
   $span.innerHTML = $span.innerHTML
     .replace(
       /\*\*(.*?)\*\*/g,
-      '<strong class="c-card__content--big">$1</strong>'
+      '<strong class="c-card__content--big">$1</strong>',
     )
     .replace(/\n/g, "<br>");
 
   return $span;
 };
 
+/**
+ * @param {string} setName
+ */
+const roll = (setName) => {
+  const set = sets[setName];
+  if (!set) throw new Error(`No set found for name: ${setName}`);
+
+  const value = set[Math.floor(Math.random() * set.length)];
+
+  $cardContent.textContent = "";
+  $cardContent.appendChild(format(value));
+  $card.dataset.setName = setName;
+  $card.showModal();
+};
+
 document.addEventListener("click", (e) => {
   if (e.target instanceof HTMLButtonElement && e.target.dataset.set) {
-    const setName = e.target.dataset.set;
-    const set = sets[setName];
-    if (!set) throw new Error(`No set found for name: ${setName}`);
-
-    const value = set[Math.floor(Math.random() * set.length)];
-
-    $cardContent.textContent = "";
-    $cardContent.appendChild(format(value));
-    $card.showModal();
+    roll(e.target.dataset.set);
   }
 
   if (
@@ -60,6 +67,9 @@ document.addEventListener("click", (e) => {
     } else if (action === "save") {
       save($cardContent.textContent || "");
       $card.close();
+    } else if (action === "reroll" && $card.dataset.setName) {
+      save($cardContent.textContent || "");
+      roll($card.dataset.setName);
     }
   }
 
@@ -79,7 +89,7 @@ if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("./sw.js").then((reg) => {
     reg.addEventListener("updatefound", function () {
       console.log(
-        "A new version of this application is available. Refresh to update."
+        "A new version of this application is available. Refresh to update.",
       );
     });
   });
